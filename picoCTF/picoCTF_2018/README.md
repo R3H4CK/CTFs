@@ -25,7 +25,6 @@ None
 | absolutely relative | General Skills | 250 |
 | in out error | General Skills | 275 |
 | learn gdb | General Skills | 300 |
-| store | General Skills | 400 |
 | script me | General Skills | 500 |
 | Dog or Frog | General Skills | 900 |
 | Reversing Warmup 1 | Reversing | 50 |
