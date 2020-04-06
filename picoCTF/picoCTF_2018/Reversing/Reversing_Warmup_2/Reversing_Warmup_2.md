@@ -13,5 +13,5 @@ import base64
 
 print(str(base64.b64decode("dGg0dF93NHNfczFtcEwz"), encoding='utf-8'))
 ```
-  
-flag: 'picoCTF{th4t_w4s_s1mpL3}'
+
+flag: `picoCTF{th4t_w4s_s1mpL3}`
