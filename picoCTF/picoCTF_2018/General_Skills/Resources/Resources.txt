@@ -1,0 +1,3 @@
+해당 링크로 들어가면 flag가 있다. flag의 뜻은 중국어 병음으로 "Thanks for being here"이다.
+
+picoCTF{xiexie_ni_lai_zheli}
