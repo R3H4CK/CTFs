@@ -7,7 +7,7 @@ None
 ## Review
 중학생 및 고등학생에게 포커스를 맞춘 CTF이다. 문제 구성은 전체적으로 난이도는 쉽고 많은 문제들로 구성되어 있다. 따라서 입문자에게 CTF의 느낌을 알려줄 수 있을 것 같다.
 
-## WriteUp
+## WriteUps
 | Challenge | Category | Points |
 |:-:|:-:|:-:|
 | General Warmup 1 | General Skills | 50 |
