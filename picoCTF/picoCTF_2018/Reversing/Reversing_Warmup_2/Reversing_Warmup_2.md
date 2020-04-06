@@ -5,6 +5,7 @@
 
 ## Solution
 > dGg0dF93NHNfczFtcEwz
+
 주어진 문자열을 base64 decode 하면 된다.
 
 ``` python
