@@ -91,7 +91,7 @@ Hex-Rays를 적용한 소스를 보자. __sysv_signal 함수는 해당 시그널
 gdb be-quick-or-be-dead-1
 break *0x000000000040078e
 run
-set &edi=10
+set $edi=10
 c
 ```
 
