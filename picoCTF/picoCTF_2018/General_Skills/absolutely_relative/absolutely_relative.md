@@ -1,4 +1,4 @@
-우선 absolutely-relative.c의 소스를 보면 다음과 같습니다.
+우선 absolutely-relative.c의 소스를 보면 다음과 같다.
 
 ``` c
 #include <stdio.h>
