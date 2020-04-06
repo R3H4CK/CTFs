@@ -88,6 +88,7 @@ Hex-Rays를 적용한 소스를 보자. __sysv_signal 함수는 해당 시그널
 끝에서 alarm 함수로 1초 후에 시그널을 발생시키는 것을 볼 수 있다. 인자를 10으로 고치면 시그널이 발생하기 전에 끝이나고 flag를 출력할 것이다.
 
 ``` bash
+gdb be-quick-or-be-dead-1
 break *0x000000000040078e
 run
 set &edi=10
