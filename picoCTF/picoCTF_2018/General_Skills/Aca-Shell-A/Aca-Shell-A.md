@@ -1,5 +1,5 @@
 > 모험을 떠나기 전에 리눅스의 기술을 연마하는 것은 결코 나쁜 생각이 아닙니다!
-> nc 2018shell.picoctf.com 27833로 접속하십시오.
+> nc 2018shell.picoctf.com 27833로 접속하십시오.  
 
 ``` batch
 nc 2018shell.picoctf.com 27833
