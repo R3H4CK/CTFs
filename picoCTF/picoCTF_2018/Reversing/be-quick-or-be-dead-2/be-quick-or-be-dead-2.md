@@ -40,6 +40,6 @@ int main(void)
 }
 ```
 IDA로 Hex-Rays를 적용한 소스를 보면 1처럼 시그널을 호출하고 복호화 루틴을 거치게 된다. 복호화 루틴에서 피보나치 수를 사용하는데 재귀함수로 구현되어 있기 때문에 계산하는데 시간이 너무 오래걸린다.  
-피보나치 수는 F<sub>0</sub>=0, F<sub>1</sub>=1, F<sub>n</sub>=F<sub>n-1</sub>+F<sub>n-2</sub>와 같이 재귀적으로 정의되는 수다. https://ko.numberempire.com/fibonaccinumbers.php 에서 피보나치 수를 계산하거나 위의 소스처럼 fib 함수를 반복문으로 고쳐서 실행하면 된다.
+<a href="https://ko.numberempire.com/fibonaccinumbers.php">피보나치 수</a>(Fibonacci number)는 F<sub>0</sub>=0, F<sub>1</sub>=1, F<sub>n</sub>=F<sub>n-1</sub>+F<sub>n-2</sub>와 같이 재귀적으로 정의되는 수다. 피보나치 수를 계산하거나 위의 소스처럼 fib 함수를 반복문으로 고쳐서 실행하면 된다.
 
 flag: `picoCTF{the_fibonacch_sequence_can_be_done_fast_88f31f48}`
