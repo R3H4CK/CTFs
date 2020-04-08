@@ -1,51 +1,11 @@
 # assembly-1
+> What does asm1(0x15e) return? Submit the flag as a hexadecimal value (starting with '0x'). NOTE: Your submission for this question will NOT be in the normal flag format. Source located in the directory at /problems/assembly-1_3_cfc4373d0e723e491f368e7bcc26920a.
 
 ## Surmmary
 * 80x86 Assembly
 * Hand-Rays
 
-## Solution
-``` Assembly
-.intel_syntax noprefix
-.bits 32
-	
-.global asm1
-
-asm1:
-	push	ebp
-	mov	ebp,esp
-	cmp	DWORD PTR [ebp+0x8],0xdc
-	jg 	part_a	
-	cmp	DWORD PTR [ebp+0x8],0x8
-	jne	part_b
-	mov	eax,DWORD PTR [ebp+0x8]
-	add	eax,0x3
-	jmp	part_d
-part_a:
-	cmp	DWORD PTR [ebp+0x8],0x68
-	jne	part_c
-	mov	eax,DWORD PTR [ebp+0x8]
-	sub	eax,0x3
-	jmp	part_d
-part_b:
-	mov	eax,DWORD PTR [ebp+0x8]
-	sub	eax,0x3
-	jmp	part_d
-	cmp	DWORD PTR [ebp+0x8],0xfc
-	jne	part_c
-	mov	eax,DWORD PTR [ebp+0x8]
-	sub	eax,0x3
-	jmp	part_d
-part_c:
-	mov	eax,DWORD PTR [ebp+0x8]
-	add	eax,0x3
-part_d:
-	pop	ebp
-	ret
-```
-
-위의 소스를 Hand-Rays(지금부터 손으로 디컴파일 하는 것을 Hand-rays라고 하겠습니다)하면 다음과 같다.
-
+## Analysis
 ``` c
 int asm1(int a)
 {
@@ -67,7 +27,6 @@ part_c:
 		return a + 0x3;
 }
 ```
-
-따라서 asm1(0x15e)는 0x161을 반환한다.  
+주어진 어셈블리 소스를 Hand-Rays하면 위와 같으므로 asm1(0x15e)는 0x161을 반환한다.
 
 flag: `0x161`
