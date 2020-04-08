@@ -1,4 +1,5 @@
 # be-quick-or-be-dead-3
+> As the song draws closer to the end, another executable be-quick-or-be-dead-3 suddenly pops up. This one requires even faster machines. Can you run it fast enough too? You can also find the executable in /problems/be-quick-or-be-dead-3_3_0c252fe89f7cc34dff41e72d178ff2ae.
 
 ## Summary
 * algorithm
