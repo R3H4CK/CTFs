@@ -1,39 +1,11 @@
 # assembly-2
+> What does asm2(0x7,0x28) return? Submit the flag as a hexadecimal value (starting with '0x'). NOTE: Your submission for this question will NOT be in the normal flag format. Source located in the directory at /problems/assembly-2_4_f8bfecf223768f4cac035751390ea590.
 
 ## Summary
 * 80x86 Assembly
-* GNU Compiler C Loop(for or while)
+* GNU C Compiler Loop(for or while)
 
-## Solution
-``` assembly
-.intel_syntax noprefix
-.bits 32
-	
-.global asm2
-
-asm2:
-	push   	ebp
-	mov    	ebp,esp
-	sub    	esp,0x10
-	mov    	eax,DWORD PTR [ebp+0xc]
-	mov 	DWORD PTR [ebp-0x4],eax
-	mov    	eax,DWORD PTR [ebp+0x8]
-	mov	DWORD PTR [ebp-0x8],eax
-	jmp    	part_b
-part_a:	
-	add    	DWORD PTR [ebp-0x4],0x1
-	add	DWORD PTR [ebp+0x8],0x76
-part_b:	
-	cmp    	DWORD PTR [ebp+0x8],0xa1de
-	jle    	part_a
-	mov    	eax,DWORD PTR [ebp-0x4]
-	mov	esp,ebp
-	pop	ebp
-	ret
-```
-
-위의 소스는 GNU C 컴파일러의 while문의 형태를 보여주고 있다. Hand-Rays하면 다음과 같다.
-
+## Analysis
 ``` c
 int asm2(int a, int b)
 {
@@ -48,7 +20,7 @@ int asm2(int a, int b)
 	return i;
 }
 ```
-
-따라서 asm2(0x7, 0x28)의 반환 값은 0xa1df이다.  
+주어진 어셈블리 소스는 임의로 작성한 것으로 보이지만 GNU C 컴파일러의 while 루프에 가깝다.  
+주어진 소스를 Hand-Rays하면 위와 같으므로 asm2(0x7, 0x28)의 반환 값은 0xa1df이다.  
 
 flag: `0xa1df`
