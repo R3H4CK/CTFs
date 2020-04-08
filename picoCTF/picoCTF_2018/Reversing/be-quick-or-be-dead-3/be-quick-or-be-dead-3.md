@@ -41,7 +41,7 @@ int main(void)
 	return 0;
 }
 ```
-IDA로 Hex-Rays해서 clac 함수의 소스를 보면 4를 기점으로 함수의 정의가 다른데 이는 수학적으로는 조각적으로 정의된 함수(piecewise-defined function)입니다.  
+IDA로 Hex-Rays해서 calc 함수의 소스를 보면 4를 기점으로 함수의 정의가 다른데 이는 수학적으로는 조각적으로 정의된 함수(piecewise-defined function)입니다.  
 재귀호출로 구현되어 있어 너무 느려서 계산을 할 수 없다. 이를 반복문으로 고쳐서 위와 같이 복호화 루틴을 거쳐주면 된다.  
 
 flag: `picoCTF{dynamic_pr0gramming_ftw_d1b4a912}`
