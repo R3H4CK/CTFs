@@ -6,7 +6,7 @@
 * XOR
 
 ## Analysis
-``` c
+``` python
 from pybitrot import rol8, ror8
 
 encryptedBuffer = "11 80 20 E0 22 53 72 A1 01 41 55 20 A0 C0 25 E3 35 40 65 95 75 00 30 85 C1"
