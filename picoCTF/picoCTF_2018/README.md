@@ -40,6 +40,9 @@ None
 | Radix's Terminal | Reversing | 400 |
 | assembly-3 | Reversing | 400 |
 | keygen-me-1 | Reversing | 400 |
+| assembly-4 | Reversing | 550 |
+| keygen-me-2 | Reversing | 750 |
+| circuit123 | Reversing | 800 |
 | Crypto Warmup 1 | Cryptography | 75 |
 | Crypto Warmup 2 | Cryptography | 75 |
 | HEEEEEEERE'S Johnny! | Cryptography | 100 |
