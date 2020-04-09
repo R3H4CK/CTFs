@@ -18,18 +18,18 @@ def c_ord(ch):
     ch = ord(ch)
     if ch > 47 and ch <= 57:
         return ch - 48
-    if ch <= 64 and ch > 90:
+    if ch <= 64 or ch > 90:
         print("Found Invalid Character!")
         sys.exit(0)
     return ch - 55
 
 def check_valid_key(s):
-    if not id(s):
+    if not id(s[0]):
         return 0
     v2 = s[0]
     v3 = 0
     while ord(v2):
-        if check_valid_char(v2):
+        if not check_valid_char(v2):
             return 0
         v3 += 1
         try: 
@@ -42,13 +42,10 @@ def check_valid_key(s):
             return 0
 
 def mod(a, m):
-    if a % m >= 0:
-        return a % m
-    else:
-        return a % m + m
+    return a % m if a % m >= 0 else a % m + m
 
 def key_constraint_01(s):
-    return mod(c_ord(a[0]) + c_ord(a[1]), 36) == 14
+    return mod(c_ord(s[0]) + c_ord(s[1]), 36) == 14
 
 def key_constraint_02(s):
     return mod(c_ord(s[2]) + c_ord(s[3]), 36) == 24
