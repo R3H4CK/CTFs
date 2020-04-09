@@ -1,6 +1,7 @@
 import sys
 
 def check_valid_char(ch):
+    ch = ord(ch)
     return ch > 47 and ch <= 57 or ch > 64 and ch <= 90
 
 def check_valid_key(s):
@@ -12,13 +13,17 @@ def check_valid_key(s):
         if not check_valid_char(v2):
             return 0
         v3 += 1
-        v2 = s[v3]
+        try:
+            v2 = s[v3]
+        except IndexError:
+            pass
     if v3 == 16:
         return 16
     else:
         return 0
 
 def c_ord(ch):
+    ch = ord(ch)
     if ch > 47 and ch <= 57:
         return ch - 48
     if ch <= 64 or ch > 90:
@@ -31,7 +36,7 @@ def validate_key(s):
     v2 = 0
     for i in range(v4 - 1):
         v2 += (c_ord(s[i]) + 1) * (i + 1)
-    return v2 % 24 == c_ord(s[v4 - 1]) 
+    return v2 % 0x24 == c_ord(s[v4 - 1]) 
 
 def print_flag():
     try:
@@ -42,7 +47,9 @@ def print_flag():
         print("Flag File is Missing.")
 
 if len(sys.argv) > 1:
-    if check_valid_key(sys.argc[1]):
+    print("6")
+    if check_valid_key(sys.argv[1]):
+        print("7")
         if validate_key(sys.argv[1]):
             print("Product Activated Successfully: ", end='')
             print_flag();
