@@ -2,8 +2,8 @@
 > The software has been updated. Can you find us a new product key for the program in /problems/keygen-me-2_2_5374d282dd09441ebd3055cb968eefff
 
 ## Summary
-* keygen
-* simultaneous equation
+* KeygenMe
+* Simultaneous equation
 * Z3 Probing
 
 ## Analysis
