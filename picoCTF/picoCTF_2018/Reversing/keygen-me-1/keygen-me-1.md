@@ -1,7 +1,9 @@
-#
+# keygen-me-1
+> Can you generate a valid product key for the validation program in /problems/keygen-me-1_0_2b06ee615c1b7021f1eff5829aae5006
 
 ## Summary
 * Keygen
+* Simple compare
 
 ## Analysis
 ``` python
