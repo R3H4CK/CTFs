@@ -81,6 +81,6 @@ import base64
 print(str(base64.b64decode("cGljb0NURntiQXNFXzY0X2VOQ29EaU5nX2lTX0VBc1lfMjk1ODA5OTN9"), encoding='utf-8'))
 ```
 
-위의 루틴은 analysis의 코드를 보면 base64 라는 것을 알 수 있으므로 그냥 디코드하면 된다.  
+analysis의 코드를 보면 base64 라는 것을 알 수 있으므로 그냥 디코드하면 된다.  
 
 flag: `picoCTF{bAsE_64_eNCoDiNg_iS_EAsY_29580993}`
