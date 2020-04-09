@@ -3,7 +3,7 @@
 
 ## Summary
 * Cryptography
-* SHA-512 Hash function
+* SHA-512 hash function
 
 ## Analysis
 ``` python
