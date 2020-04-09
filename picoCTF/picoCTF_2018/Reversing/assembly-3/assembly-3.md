@@ -7,18 +7,18 @@
 
 ## Analysis
 ``` assembly
-  push   	ebp
-	mov    	ebp,esp            ; enter
-	mov	eax,0x27               ; eax=0
-	xor	al,al                  ; al=0
-	mov	ah,BYTE PTR [ebp+0xb]  ; ah=*((char*)ebp+0xb)
-	sal	ax,0x10                ; ax <<= 0x10
-	sub	al,BYTE PTR [ebp+0xc]  ; al -= *((char*)ebp+0xc) 
-	add	ah,BYTE PTR [ebp+0xf]  ; ah += *((char*)ebp+0xf)
-	xor	ax,WORD PTR [ebp+0x12] ; ax += *((short*)ebp+0x12)
-	mov	esp, ebp
-	pop	ebp                    ; leave
-	ret
+push   	ebp
+mov    	ebp,esp            ; enter
+mov	eax,0x27               ; eax=0
+xor	al,al                  ; al=0
+mov	ah,BYTE PTR [ebp+0xb]  ; ah=*((char*)ebp+0xb)
+sal	ax,0x10                ; ax <<= 0x10
+sub	al,BYTE PTR [ebp+0xc]  ; al -= *((char*)ebp+0xc) 
+add	ah,BYTE PTR [ebp+0xf]  ; ah += *((char*)ebp+0xf)
+xor	ax,WORD PTR [ebp+0x12] ; ax += *((short*)ebp+0x12)
+mov	esp, ebp
+pop	ebp                    ; leave
+ret
 ```
 
 ## Solve
