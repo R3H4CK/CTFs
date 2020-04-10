@@ -45,6 +45,6 @@ def decrypt(cipher):
 print(encrypt(text)) # ROT13 is enc == dec
 ```
 
-ROT13으로 암호화되어있는데 회전을 13번 하는 이유는 암호화와 복호화 같은 유일한 횟수이기 때문이다.  
+<a href="https://rot13.com/" target="_blank">ROT13으로 암호화되어있는데 회전을 13번 하는 이유는 암호화와 복호화 같은 유일한 횟수이기 때문이다.  
 
 flag: `picoCTF{this_is_crypto!}`
