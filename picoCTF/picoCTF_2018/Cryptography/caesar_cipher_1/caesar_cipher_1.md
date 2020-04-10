@@ -52,5 +52,6 @@ for key in range(1, 26):
     print("%2d: " % key + "picoCTF{"+encrypt(text, key)+"}")
 ```
 오리지널 시저 암호(caesar cipher)는 키가 3이다. 해당 암호문은 ROT14로 복호화 할 수 있다.  
+시저 암호(카이사르 암호)는 줄리어스 시저(가이우스 율리우스 카이사르(라틴어: Gaius Iulius Caesar))의 이름을 딴 것이다.
 
 flag: `picoCTF{justagoodoldcaesarcipherlcolmdsc}`
