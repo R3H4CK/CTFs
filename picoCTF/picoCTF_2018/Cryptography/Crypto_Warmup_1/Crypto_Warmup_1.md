@@ -72,6 +72,6 @@ def decrypt(cipher, key):
 
 print(decrypt(text, key))
 ```
-문제의 암호문과 키는 decode.fr의 <a href="https://www.dcode.fr/vigenere-cipher" target="_blank">비즈네르 암호</a>(vigenere cipher)의 예제이다.  
+문제에서 주어진 암호문과 키가 상당히 익숙한데, 이는 decode.fr의 <a href="https://www.dcode.fr/vigenere-cipher" target="_blank">비즈네르 암호</a>(vigenere cipher)의 예제이다.  
 
 flag: `picoCTF{secretmessage}`
