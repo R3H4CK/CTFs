@@ -39,6 +39,8 @@ def encrypt(plain, key):
             elif key[j].isupper():
                 plain[i] = (ord(plain[i]) - 65 + ord(key[j]) - 65) % 26
             plain[i] += 65
+        else:
+            plain[i] = ord(plain[i])
         j += 1
     return ''.join(map(chr, plain))
 
@@ -63,6 +65,8 @@ def decrypt(cipher, key):
             if cipher[i] < 0:
                 cipher[i] += 26
             cipher[i] += 65
+        else:
+            cipher[i] = ord(cipher[i])
         j += 1
     return ''.join(map(chr, cipher))
 
