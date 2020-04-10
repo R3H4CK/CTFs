@@ -1,6 +1,10 @@
 # Crypto Warmup 1
 > Crpyto can often be done by hand, here's a message you got from a friend, llkjmlmpadkkc with the key of thisisalilkey. Can you use this table to solve it?.
 
+## Summary
+* vigenere cipher
+* classical cipher
+
 ## Analysis
 ``` python
 ciphertext = "llkjmlmpadkkc"
@@ -64,6 +68,6 @@ def decrypt(cipher, key):
 
 print(decrypt(text, key))
 ```
-문제의 암호문과 키는 decode.fr의 <a href="https://www.dcode.fr/vigenere-cipher" target="_blank">비즈네르 암호</a>(vignere cipher)의 예제이다.
+문제의 암호문과 키는 decode.fr의 <a href="https://www.dcode.fr/vigenere-cipher" target="_blank">비즈네르 암호</a>(vigenere cipher)의 예제이다.
 
 flag: `picoCTF{secretmessage}`
