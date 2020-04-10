@@ -36,6 +36,7 @@ def decrypt(cipher, key):
             if cipher[i] < 0:
                 cipher[i] += 26
             cipher[i] += 97
+            j += 1
         elif cipher[i].isupper():
             if key[j].islower():
                 cipher[i] = (ord(cipher[i]) - 65 - ord(key[j]) + 97) % 26
@@ -44,9 +45,9 @@ def decrypt(cipher, key):
             if cipher[i] < 0:
                 cipher[i] += 26
             cipher[i] += 65
+            j += 1
         else:
             cipher[i] = ord(cipher[i])
-        j += 1
     return ''.join(map(chr, cipher))
 
 print(decrypt(text, key))
