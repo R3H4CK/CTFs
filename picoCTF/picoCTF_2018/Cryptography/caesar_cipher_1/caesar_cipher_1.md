@@ -20,27 +20,27 @@ for i in range(len(text)):
 ``` python
 text = "vgefmsaapaxpomqemdoubtqdxoaxypeo"
 
-def encrypt(plain):
+def encrypt(plain, key):
     plain = list(plain)
     for i in range(len(plain)):
         if plain[i].islower():
-            plain[i] = (ord(plain[i]) - 97 + 14) % 26 + 97
+            plain[i] = (ord(plain[i]) - 97 + key) % 26 + 97
         elif plain[i].isupper():
-            plain[i] = (ord(plain[i]) - 65 + 14) % 26 + 65
+            plain[i] = (ord(plain[i]) - 65 + key) % 26 + 65
         else:
             plain[i] = ord(plain[i])
     return ''.join(map(chr, plain))
 
-def decrypt(cipher):
+def decrypt(cipher, key):
     cipher = list(cipher)
     for i in range(len(cipher)):
         if cipher[i].islower():
-            cipher[i] = (ord(cipher[i]) - 97 - 14) % 26
+            cipher[i] = (ord(cipher[i]) - 97 - key) % 26
             if cipher[i] < 0:
                 cipher[i] += 26
             cipher[i] += 97
         elif cipher[i].isupper():
-            cipher[i] = (ord(cipher[i]) - 65 - 14) % 26
+            cipher[i] = (ord(cipher[i]) - 65 - key) % 26
             if cipher[i] < 0:
                 cipher[i] += 26
             cipher[i] += 65
@@ -48,7 +48,8 @@ def decrypt(cipher):
             cipher[i] = ord(cipher[i])
     return ''.join(map(chr, cipher))
 
-print("picoCTF{"+encrypt(text)+"}")
+for key in range(1, 26):
+    print("%2d: " % key + "picoCTF{"+encrypt(text, key)+"}")
 ```
 오리지널 시저 암호(caesar cipher)는 키가 3이다. 해당 암호문은 ROT14로 복호화 할 수 있다.  
 
