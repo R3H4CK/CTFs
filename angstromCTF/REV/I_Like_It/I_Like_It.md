@@ -1,6 +1,6 @@
 # I Like It
-> Now I like dollars, I like diamonds, I like ints, I like strings. Make Cardi like it please.  
-`/problems/2019/i_like_it`  
+> Now I like dollars, I like diamonds, I like ints, I like strings. Make Cardi like it please.    
+`/problems/2019/i_like_it`    
 Author: SirIan
 
 ## Summary
