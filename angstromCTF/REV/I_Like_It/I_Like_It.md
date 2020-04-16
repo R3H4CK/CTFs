@@ -18,7 +18,7 @@ x, y = Ints('x y')
 solve(x + y == 136, x * y == 3783, x < y)
 ```
 
-`` bash
+``` bash
 (python -c 'print "39 97"';cat)|(python -c 'print "okrrrrrrr"';cat)|./i_like_it
 ```
 
