@@ -3,7 +3,7 @@
 Author: Aplet123
 
 ## Summary
-* operation
+* angr
 * troublesome
 
 ## Analysis
@@ -145,6 +145,6 @@ for i in range(19):
         
 print(''.join(flag))
 ```
-각각의 역합수를 구하고 적절히 브루트포스하면 flag를 구할 수 있다.
+각각의 역함수(inverse function)를 구하고 적절히 브루트포스하면 flag를 구할 수 있다.
 
 flag `actf{fun_func710n5}`
