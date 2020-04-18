@@ -7,7 +7,7 @@
 
 ## Analysis
 ``` python
-flag = list("jU5t_a_sna_3lpm13gc49_u_4_m0rf41")
+flag = "jU5t_a_sna_3lpm13gc49_u_4_m0rf41"
 
 print(len(flag))
 print(''.join(flag))
