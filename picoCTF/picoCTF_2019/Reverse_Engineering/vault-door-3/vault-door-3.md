@@ -10,7 +10,7 @@
 flag = "jU5t_a_sna_3lpm13gc49_u_4_m0rf41"
 
 print(len(flag))
-print(''.join(flag))
+print(flag)
 
 for i in range(0, 8):
     print(i, end=' ')
