@@ -65,7 +65,7 @@ print("Challenge: ", end='')
 generate_challenge()
 print(chr(10), end='', flush=True)
 print("Setting alarm...", flush=True)
-libc.ualarm(200)
+libc.ualarm(200, 0)
 print("Solution? ", end='')
 libc.scanf(b"%d", pointer(guess))
 
