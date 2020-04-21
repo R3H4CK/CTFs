@@ -85,10 +85,10 @@ from pwn import *
 
 p = process("./times-up")
 
-chall = p.recv()
-chall = chall[len('Challenge: '):chall.index('\n')]
+expr = p.recv()
+expr = expr[len('Challenge: '):expr.index('\n')]
 
-p.sendline(str(eval(chall)))
+p.sendline(str(eval(expr)))
 
 print(p.recvall())
 ```
