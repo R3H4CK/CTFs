@@ -94,7 +94,7 @@ p.sendline(str(eval(chall)))
 
 print(p.recvall())
 ```
-서버 쉘의 해당 경로에서 실행하면 5초 뒤에 SIGALARM을 발생시켜 종료하는데 이는 pwntools와 eval 함수를 사용하면 쉽게 풀 수 있다.  
+서버 쉘의 해당 경로에서 실행하면 5초 뒤에 SIGALARM을 발생시켜 종료하는데 이는 pwntools를 사용하면 쉽게 풀 수 있다.  
 home 디렉토리에서 solve.py를 작성한 후 다시 해당 경로로 이동해서 python으로 실행하면 된다.  
 
 flag: `picoCTF{Gotta go fast. Gotta go FAST. #3c4b5166}`
