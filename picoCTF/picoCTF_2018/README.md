@@ -9,7 +9,6 @@ None
 
 ## WriteUps
 | Challenge | Category | Points |
-|:-:|:-:|:-:|
 | General Warmup 1 | General Skills | 50 |
 | General Warmup 2 | General Skills | 50 |
 | General Warmup 3 | General Skills | 50 |
