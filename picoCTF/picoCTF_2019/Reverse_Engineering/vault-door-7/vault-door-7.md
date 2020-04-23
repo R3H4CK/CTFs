@@ -52,6 +52,15 @@ for i in range(len(x)):
 print(''.join(flag))
 ```
 입력받은 값을 16진수로 배열로 바꾸고 shift를 이용한 전치로 32비트 패킹을 한다. (solve1.py를 참고)
+``` python
+flag = b""
+X = [1096770097, 1952395366, 1600270708, 1601398833, 1716808014, 1734304823, 962880562, 895706419]
+
+for x in X:
+    flag += x.to_bytes(4, byteorder="big")
+print(flag.decode())
+```
+위의 루틴은 int.to_bytes 메서드를 사용하면 쉽게 풀 수 있다.
 ``` c
 #include <stdio.h>
 
