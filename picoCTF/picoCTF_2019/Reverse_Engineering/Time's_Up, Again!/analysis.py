@@ -48,7 +48,7 @@ def gen_expr(n):
 
 def generate_challenge():
     global result
-    result.value = gen_expr(4).value
+    result = gen_expr(4)
 
 
 init_randomness()
