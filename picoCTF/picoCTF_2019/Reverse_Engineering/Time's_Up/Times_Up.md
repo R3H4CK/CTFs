@@ -60,7 +60,7 @@ def gen_expr(n):
 
 def generate_challenge():
     global result
-    result.value = gen_expr(4).value
+    result = gen_expr(4)
 
 
 init_randomness()
@@ -85,9 +85,7 @@ from pwn import *
 
 p = process("./times-up")
 
-expr = p.recv()
-expr = expr[len('Challenge: '):expr.index('\n')]
-
+expr = p.readline()[10:-1]
 p.sendline(str(eval(expr)))
 
 print(p.recvall())
@@ -98,9 +96,10 @@ home 디렉토리에서 solve.py를 작성한 후 다시 해당 경로로 이동
 import subprocess
 
 p = subprocess.Popen("./times-up", stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+
 expr = p.stdout.readline()[10:-1]
-expr = eval(expr)
-p.stdin.write(str(expr)+'\n')
+p.stdin.write(str(eval(expr))+'\n')
+
 print(p.stdout.read())
 ```
 다른 방법으로는 subprocess 모듈을 이용하여 자식 프로세스에 접근하는 방식으로 풀 수 있다.  
