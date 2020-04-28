@@ -90,3 +90,33 @@ else:
 ```
 
 ## Solve
+``` python
+from ctypes import *
+import subprocess
+
+libc = CDLL("libc.so.6")
+
+SIGALRM = 14
+SIG_BLOCK = 0
+
+class sigset_t(Structure):
+    _fields_= [("__sigbit", c_uint * 4)]
+
+
+sigset = sigset_t()
+
+libc.sigemptyset(pointer(sigset))
+libc.sigaddset(pointer(sigset), SIGALRM)
+libc.sigprocmask(SIG_BLOCK, pointer(sigset), None)
+
+while True:
+    p = subprocess.Popen("./times-up-one-last-time", stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    p.stdin.write('0\n')
+    flag = p.stdout.read()
+    if "pico" in flag:
+        print(flag)
+        break
+```
+이 문제의 의도는 C 언어에서 subprocess를 이용하는 것으로 보이지만 time-xxx 문제들은 모두 시그널을 Block 시켜서 풀 수 있다. 또한 위의 식에는 `/`, `%`와 같은 연산 때문에 정수 범위에서는 0이 나올 확률이 상당히 높다.  
+
+flag: `picoCTF{And now you can hack time! #2e0a37d1}`
