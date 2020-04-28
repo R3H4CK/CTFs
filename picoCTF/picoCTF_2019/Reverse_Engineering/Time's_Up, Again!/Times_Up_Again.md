@@ -57,7 +57,7 @@ def gen_expr(n):
 
 def generate_challenge():
     global result
-    result.value = gen_expr(4).value
+    result = gen_expr(4)
 
 
 init_randomness()
@@ -77,3 +77,21 @@ else:
 ```
 
 ## Solve
+``` python
+import subprocess
+
+while True:
+    p = subprocess.Popen("./times-up-again", stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    expr = p.stdout.readline()[10:-1]
+    try:
+        p.stdin.write(str(eval(expr))+'\n')
+    except IOError:
+        continue
+    flag = p.stdout.read()
+    if "pico" in flag:
+        print(flag)
+        break
+```
+times-up-again은 챌린지를 시작하고 0.2초 후에 시그널을 발생시키기 때문에 성공 확률이 적다. pwntools는 실패하면 통신이 끊겨버리므로 사용하기 어렵다. 따라서 위와 같이 subprocess를 사용하되 성공할 때까지 수행하도록 하면 된다.  
+
+flag: `picoCTF{Hasten. Hurry. Ferrociously Speedy. #3230cac7}`
