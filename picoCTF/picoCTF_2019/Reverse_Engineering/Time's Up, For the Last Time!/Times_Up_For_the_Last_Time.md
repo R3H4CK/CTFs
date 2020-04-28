@@ -96,8 +96,8 @@ import subprocess
 
 libc = CDLL("libc.so.6")
 
-SIGALRM = 14
-SIG_BLOCK = 0
+SIGALRM = 14  # C macro
+SIG_BLOCK = 0 # C macro
 
 class sigset_t(Structure):
     _fields_= [("__sigbit", c_uint * 4)]
