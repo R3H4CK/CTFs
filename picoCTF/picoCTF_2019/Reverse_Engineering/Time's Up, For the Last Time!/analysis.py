@@ -14,18 +14,30 @@ def get_random():
     return c_int(int.from_bytes(urandom(8), byteorder))
 
 def get_random_op():
-    v2 = 2764075
+    # v4 : v3 : v2
+    v2 = 11119202356222773194984351477035
     v0 = libc.rand()
-    return c_uint(v2 >> (v0 - 3 * ((0xAAAAAAAAAAAAAAAB * v0 >> 64) >> 1)) * 8 & 0xff)
+    return c_uint(v2 >> (v0 - 13 * ((0x4EC4EC4EC4EC4EC5 * v0 >> 64) >> 2)) * 8 & 0xff)
 
 def do_op(a, b, c):
-    if a == 43:
-        return c_int(b + c)
-    if a == 45:
-        return c_int(b - c)
-    if a != 42:
+    try:
+        return c_int({
+            '%': b % c if c else b,
+            '&': c & b,
+            '*': c * b,
+            '+': b + c,
+            '-': b - c,
+            '/': b / c if c else b,
+            '^': c ^ b,
+            'f': b,
+            'o': c,
+            'r': c,
+            't': b,
+            'x': c,
+            '|': c | b
+        }[chr(a)])
+    except KeyError:
         exit(1)
-    return c_int(c * b)
 
 def maybe_decrease(n):
     return c_int(n) if libc.rand() % 50 <= 0 else c_int(n - 1)
@@ -48,20 +60,20 @@ def gen_expr(n):
 
 def generate_challenge():
     global result
-    result.value = gen_expr(4).value
+    result = gen_expr(4)
 
 
 init_randomness()
 print("Challenge: ", end='')
 generate_challenge()
-print(chr(10), end='', flush=True)
+print(flush=True)
 print("Setting alarm...", flush=True)
-libc.ualarm(200)
+libc.ualarm(10, 0)
 print("Solution? ", end='')
 libc.scanf(b"%d", pointer(guess))
 
 if guess.value == result.value:
-    print("Congrats! Here is the flag.txt!")
+    print("Congrats! Here is the flag!")
     libc.system("/bin/cat flag.txt")
 else:
     print("Nope!")
