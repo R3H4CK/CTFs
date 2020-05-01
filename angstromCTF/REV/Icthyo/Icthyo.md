@@ -97,5 +97,6 @@ print(flag)
 ```
 `Analysis`의 encode 함수를 보면 중첩 반복문의 첫 번째 내측 반복문은 모든 RGB를 의사 난수 비트와 xor 하는데, LSB가 바뀌어도 큰 영향은 없다.  
 두 번째 내측 반복문에서 메시지의 비트를 하나씩 가져오고 RGB의 LSB가 존재하면 없앤다 그 다음 B = B | LSB(R ^ G) ^ LSB(msg)를 수행하게 된다.  
-즉, 32번째 RGB 마다 LSB(msg)를 하나씩 숨기는 것인데 PIL로 이미지를 읽고 간단한 역산을 해주면 된다.
+즉, 32번째 RGB 마다 LSB(msg)를 하나씩 숨기는 것인데 PIL로 이미지를 읽고 간단한 역산을 해주면 된다.  
+
 flag: `actf{lurking_in_the_depths_of_random_bits}`
