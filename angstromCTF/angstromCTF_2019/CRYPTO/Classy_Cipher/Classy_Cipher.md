@@ -59,3 +59,6 @@ def decrypt(cipher, key):
 for key in range(1, 128):
     print("%03d: %s" % (key, decrypt(text, key)))
 ```
+문제에서 시저 암호를 언급했고 우리는 더 Classy하다고 했다. 암호문에 알파벳과 숫자 이외에 다른 문자가 포함되어 있는 것으로 보아 ASCII 시프트 암호(ASCII shift cipher)이다.  
+
+flag: `actf{so_charming}`
