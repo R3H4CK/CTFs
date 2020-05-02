@@ -44,7 +44,7 @@ def encrypt(plain, key):
 def decrypt(cipher, key):
     cipher = list(cipher)
     for i in range(len(cipher)):
-        cipher[i] = ord(cipher[i]) - key % 128
+        cipher[i] = (ord(cipher[i]) - key) % 128
         if cipher[i] < 0:
             cipher[i] += 128
         cipher[i] = chr(cipher[i])
