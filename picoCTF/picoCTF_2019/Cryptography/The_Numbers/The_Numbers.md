@@ -27,6 +27,6 @@ flag.insert(7, '{')
 flag.append('}')
 print(''.join(flag))
 ```
-변형된 시저 암호(modified caesar cipher)로 이는 2006년 이탈리아 경찰이 종이쪽지에 쓰인 암호문을 해독해서 마피아 두목을 체포했던 사례와 같은 방식의 암호를 사용한다.  
+변형된 시저 암호(modified caesar cipher)로 이는 2006년 이탈리아 경찰이 종이쪽지에 쓰인 암호문을 해독해서 마피아 두목을 체포했던 사례의 암호와 같은 방식의 암호를 사용한다.  
 
 flag: `PICOCTF{THENUMBERSMASON}`
