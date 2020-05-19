@@ -6,7 +6,7 @@ Mm, coffee. Best served with half and half!
 Author: defund
 </blockquote>
 
-# Summary
+## Summary
 * xor
 * classical cipher
 
