@@ -1,6 +1,6 @@
 # Half and Half
 <blockquote>
-50 points, 383 solves  
+50 points, 383 solves</br>
 Mm, coffee. Best served with half and half!  
   
 Author: defund
