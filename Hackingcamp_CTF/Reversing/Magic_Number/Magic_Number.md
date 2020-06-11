@@ -52,8 +52,10 @@ else:
     exit(0)
 ```
 
-Solve
+## Solve
 ``` python
-analysis의 소스를 보면 `Magic Number`의 길이가 10이면 check 함수를 거친다. 그다음 함수의 반환값이 참이면 `Magic Number`의 자릿수별로 중복되는 값이 없는지 검사한다. 연산이 상당히 크므로 직접 계산하기는 어렵다. 따라서 check를 z3에서의 식으로 정의하고 계산하면 된다.
-flag: `작성중`
+# test
 ```
+analysis의 소스를 보면 `Magic Number`의 길이가 10이면 check 함수를 거친다. 그다음 함수의 반환값이 참이면 `Magic Number`의 자릿수별로 중복되는 값이 없는지 검사한다. 연산이 상당히 크므로 직접 계산하기는 어렵다. 따라서 check를 z3에서의 식으로 정의하고 계산하면 된다.  
+
+flag: `HCAMP{e37be3da34336761732102d3805dce60a30}`
